@@ -1,0 +1,91 @@
+*{box-sizing:border-box}
+:root{--ink:#171914;--paper:#eeeae0;--muted:#a9aa9e;--olive:#7f8664;--line:rgba(238,234,224,.2)}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.site-header{height:82px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:var(--paper);position:absolute;z-index:5;top:0;width:100%}
+.wordmark{font-size:13px;font-weight:700;letter-spacing:.16em}.wordmark span{color:#b9a878}
+.navigation{display:flex;gap:34px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.navigation a{opacity:.8}.navigation a:hover{opacity:1}
+.menu-toggle{display:none;background:none;border:0;color:var(--paper);font-size:24px}
+.hero{height:min(850px,100vh);min-height:650px;position:relative;background:#34382c;color:var(--paper);display:flex;align-items:center;overflow:hidden}
+.hero-image{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,18,13,.76),rgba(15,18,13,.12)),url("images/hero-landscape.jpg") center 55%/cover no-repeat;filter:saturate(.65)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,9,.45),transparent 45%)}
+.hero-content{position:relative;margin-left:12vw;margin-top:55px;max-width:760px}
+.eyebrow,.section-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.eyebrow{color:#c5b98e}
+h1,h2,blockquote{font-family:"Playfair Display",Georgia,serif;font-weight:400}
+h1{font-size:clamp(58px,8vw,112px);line-height:.98;letter-spacing:-.045em;margin:28px 0}
+h1 em{color:#c9bd91;font-weight:400}
+.hero-subtitle{font-size:13px;letter-spacing:.08em;color:#e1dfd4;margin:34px 0}
+.text-link{display:inline-flex;gap:24px;align-items:center;border-bottom:1px solid currentColor;padding:0 0 9px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:22px}
+.text-link span{font-size:17px}.light-link{color:var(--paper)}
+.hero-index{position:absolute;right:6vw;bottom:42px;font-size:9px;letter-spacing:.18em;color:#ddd9cb}
+.section-wrap{padding:125px 12vw}
+.intro{display:grid;grid-template-columns:1fr 2fr;gap:8vw}
+.section-label{color:#777c65;padding-top:10px}
+.intro-copy{max-width:760px}.lead{font:clamp(25px,3.3vw,42px)/1.3 "Playfair Display",Georgia,serif;margin:0 0 30px;letter-spacing:-.02em}
+.intro-copy>p:not(.lead),.bio-copy p,.film-card p:not(.eyebrow),.featured-copy>p:not(.eyebrow):not(.film-meta){font-size:14px;color:#62645a;max-width:650px}
+.featured-film{display:grid;grid-template-columns:1.15fr 1fr;background:var(--ink);color:var(--paper);min-height:590px}
+.featured-still{background:#3b4034 url("images/kenja-still.jpg") center/cover no-repeat;min-height:590px}
+.featured-copy{padding:90px 10vw 80px 8vw;align-self:center}
+.featured-copy h2{font-size:clamp(48px,6vw,76px);margin:18px 0 0;line-height:1.1}
+.amharic{font-family:serif;font-size:.42em;white-space:nowrap;color:#b9b79f;vertical-align:middle}
+.film-meta{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#b6b5a8;margin:16px 0 32px}
+.featured-copy>p:not(.eyebrow):not(.film-meta){color:#c2c2b7;line-height:1.9}
+.film-grid-section{padding-top:115px;padding-bottom:135px}
+.section-heading{display:flex;justify-content:space-between;align-items:start;margin-bottom:44px}
+.section-note{font:italic 17px "Playfair Display",Georgia,serif;color:#77786e;margin:0}
+.film-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+.film-card-image{height:330px;background:#c4c0ae;margin-bottom:24px;background-position:center;background-size:cover}
+.yadam-image{background-image:url("images/yadam-kal.jpg")}
+.agumas-image{background-image:url("images/agumas.jpg")}
+.film-card .eyebrow{color:#85886d;margin-bottom:7px}
+.film-card h3{font:32px "Playfair Display",Georgia,serif;margin:0 0 10px}
+.film-card p:not(.eyebrow){max-width:490px;color:#6e6e64;font-size:13px}
+.statement{background:#d9d6c8;text-align:center;padding:115px 20px 120px}
+.statement blockquote{font-size:clamp(32px,5vw,62px);line-height:1.2;max-width:920px;margin:30px auto;letter-spacing:-.03em}
+.statement-note{max-width:620px;margin:0 auto;color:#66685d;font-size:13px}
+.statement .eyebrow{color:#777c65}
+.bio-section{display:grid;grid-template-columns:1fr 2fr;gap:8vw}
+.bio-copy{max-width:760px}.bio-copy h2{font-size:clamp(43px,6vw,72px);line-height:1.05;margin:0 0 30px}
+.small-note{font-size:11px!important;color:#858579!important}
+.contact-section{background:var(--ink);color:var(--paper);padding:115px 12vw}
+.contact-inner{max-width:850px;margin:auto}
+.contact-inner h2{font-size:clamp(45px,7vw,82px);line-height:1.05;margin:24px 0 35px}
+.contact-email{font-size:clamp(17px,2vw,23px);border-bottom:1px solid #777b68;padding-bottom:8px}
+.contact-inner .small-note{color:#a5a69a!important;margin-top:26px}
+.site-footer{background:#11130f;color:#b7b8ac;padding:35px 6vw;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:18px;font-size:10px;letter-spacing:.08em}
+.site-footer>p{margin:0;text-align:center}.back-top{text-align:right}.copyright{grid-column:1/-1;border-top:1px solid #30332a;padding-top:20px;margin-top:15px!important;text-align:left!important;color:#777b70}
+@media(max-width:760px){.site-header{height:70px;padding:0 6vw}.menu-toggle{display:block}.navigation{display:none;position:absolute;top:70px;left:0;right:0;background:var(--ink);padding:20px 6vw 28px;flex-direction:column;gap:20px}.navigation.open{display:flex}.hero{min-height:650px;height:88vh}.hero-content{margin-left:7vw;margin-right:7vw}.hero-index{left:7vw;right:auto}.section-wrap{padding:82px 7vw}.intro,.bio-section{grid-template-columns:1fr;gap:30px}.featured-film{grid-template-columns:1fr}.featured-still{min-height:360px}.featured-copy{padding:65px 7vw 75px}.section-heading{display:block}.section-note{margin-top:15px}.film-grid{grid-template-columns:1fr;gap:55px}.film-card-image{height:260px}.statement{padding:85px 7vw}.contact-section{padding:85px 7vw}.site-footer{grid-template-columns:1fr 1fr}.site-footer>p:nth-child(2){text-align:right}.back-top{grid-column:1/-1;text-align:left}.copyright{grid-column:1/-1}}
+
+/* Kenja poster and still gallery */
+.poster-still{background-image:url("images/kenja-poster.jpg");background-size:cover;background-position:center}
+.kenja-gallery{padding-top:85px;padding-bottom:110px}
+.kenja-stills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.kenja-stills figure{margin:0}
+.kenja-stills img{display:block;width:100%;height:430px;object-fit:cover;filter:grayscale(1)}
+.kenja-stills figcaption{font:italic 14px "Playfair Display",Georgia,serif;color:#77786e;padding-top:12px}
+@media(max-width:760px){.kenja-stills{grid-template-columns:1fr 1fr;gap:14px}.kenja-stills img{height:300px}.kenja-stills figure:first-child{grid-column:1/-1}.kenja-stills figure:first-child img{height:390px}}
+
+
+/* Filmography and complete production credits */
+.credits-section{background:#e4e0d5;padding-top:100px;padding-bottom:110px}
+.credits-intro{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin:0 0 38px}
+.credits-intro h2{font:42px "Playfair Display",Georgia,serif;margin:0}
+.credits-intro p{font-size:12px;color:#74766b;margin:0}
+.credit-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 7vw}
+.credit-group h3,.cast-note h3{font:23px "Playfair Display",Georgia,serif;margin:0 0 18px}
+.credit-group h3:not(:first-child){margin-top:34px}
+.credit-group dl{display:grid;grid-template-columns:minmax(135px,.85fr) 1.15fr;gap:9px 18px;margin:0}
+.credit-group dt{font-size:11px;color:#77796d}
+.credit-group dd{font-size:12px;font-weight:600;margin:0;overflow-wrap:anywhere}
+.cast-note{border-top:1px solid #c7c4b8;margin-top:52px;padding-top:30px}
+.cast-note p{font-size:13px;margin:0 0 8px}
+.film-card .film-meta{margin:12px 0 0;color:#858579}
+@media(max-width:760px){
+  .credits-section{padding-top:78px;padding-bottom:82px}
+  .credits-intro{display:block}
+  .credits-intro p{margin-top:8px}
+  .credit-columns{grid-template-columns:1fr;gap:34px}
+  .credit-group dl{grid-template-columns:minmax(120px,.8fr) 1.2fr;gap:8px 12px}
+}
